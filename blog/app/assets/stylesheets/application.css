@@ -1,0 +1,39 @@
+body {
+  background-color: #99ccff;
+  font-family: Verdana;
+  font-size: 14px;
+  margin:0;
+}
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+a { color: #0000FF; }
+
+#navbar {
+  overflow: hidden;
+  background-color: #404040;
+}
+
+#navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #cce6ff;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #004d99;
+  color: white;
+}

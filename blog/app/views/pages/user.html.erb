@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <%= render_partial("layouts/_head.html.erb") %>
+  <body>
+    <div id="container">
+      <%= render_partial("layouts/_navbar.html.erb") %>
+      <h1><%= @title %></h1>
+      <hr>
+      <% if @name %>
+        <h1>Hello <%= @name %></h1>
+        <p><a href="/jogout">Jog Out</a></p>
+      <% else %>
+        <h1>Jog In Please</h1>
+        <form action="/jogin" method="POST">
+          <div>
+            <label for="name">Name</label><br>
+            <input name="name" type="text">
+          </div>
+          <input type="submit" value="JogIn">
+        </form>
+      <% end %> 
+      <%= @name %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <%= render_partial "layouts/_head.html.erb" %>
+  <body>
+    <div id="container">
+      <%= render_partial "layouts/_navbar.html.erb" %>
+      <h1>Edit Article</h1>
+      <hr>
+      <form action="/articles/<%= @article.id %>/update" method="PATCH">
+        <div>
+          <label for="title">Title</label><br>
+          <input type="text" name="article[title]" id="title" value="<%= @article.title %>">
+        </div>
+        <div>
+          <label for="content">Content</label><br>
+          <textarea rows="10" name="article[content]" id="content"><%= @article.content %></textarea>
+        </div>
+        <input type="submit" name="commit" value="Send">
+      </form>
+    </div>
+  </body>
+</html>
