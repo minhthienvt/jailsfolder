@@ -1,8 +1,11 @@
 # Jailsfolders
 
 This is the source code for the Build Your Own Rails tutorial. 
+
 The tutorial with detailed instructions on how to build this is at: 
+
 https://www.techandstartup.org/tutorials/build-your-own-rails
+
 This is for teaching purposes only. 
 
 There are two separate folders.

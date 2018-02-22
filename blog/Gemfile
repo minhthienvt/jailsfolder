@@ -5,8 +5,13 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # Web MVC Framework
-gem "jails"
+# gem "jails"
+gem 'jails', path: '../jails'
 # Ruby webserver - works in development and production.
 gem "puma"
 # Ruby interface to the lightweight SQLite3 embedded database engine.
 gem "sqlite3"
+
+group :development, :test do
+  gem 'byebug'
+end
