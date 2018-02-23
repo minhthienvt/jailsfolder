@@ -51,7 +51,7 @@ class Controller
   end
 
   # Set cookie with parameter key:value, then redirect back.
-  def set_new_cookie(key, value)
+  def set_cookie(key, value)
     Rack::Response.new do |response|
       response.set_cookie(key, value)
       response.redirect(@request.referer || @request.path)
@@ -59,9 +59,9 @@ class Controller
   end
 
   # Delete cookie with parameter key and redirect back.
-  def delete_the_cookie(key)
+  def delete_cookie(key)
     Rack::Response.new do |response|  
-      response.delete_cookie("greet")
+      response.delete_cookie(key)
       response.redirect(@request.referer || @request.path)
     end
   end

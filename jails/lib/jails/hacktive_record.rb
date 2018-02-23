@@ -5,8 +5,8 @@ require 'byebug'
 module HacktiveRecord
 
   class Base
-    extend(Support)
-    include(Support)
+    # extend(Support)
+
     DB = SQLite3::Database.new("db/development.sqlite3")
 
     # Return table name string by transforming the model class's name to lower case plural.
@@ -31,7 +31,7 @@ module HacktiveRecord
     # Return array of all rows in queried from the database table, converted to objects of the resource.
     def self.all
       rows = DB.execute("SELECT * FROM #{table}")
-      puts(blue("\s #{self} SQL Statement: SELECT * FROM #{table}"))
+      # puts(blue("\s #{self} SQL Statement: SELECT * FROM #{table}"))
       puts("\s #{self} SQL Statement: ".cyan.bold + "SELECT * FROM #{table}".blue.bold)
       objects = rows.map do |row|
         attributes = Hash[columns.zip(row)]

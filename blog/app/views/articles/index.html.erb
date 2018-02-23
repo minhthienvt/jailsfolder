@@ -6,7 +6,7 @@
       <%= render_partial "layouts/_navbar.html.erb" %>
       <h1>Articles</h1>
       <p>
-        There are <%= pluralize(@articles.count, "Article", "Articles") %> | 
+        <%= pluralize(@articles.count, "Article", "Articles") %> | 
         <a href="/articles/new">Create a new article</a></p>
       <hr>      
       <% @articles.each do |article| %>

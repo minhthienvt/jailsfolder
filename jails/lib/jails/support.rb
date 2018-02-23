@@ -2,9 +2,15 @@ module Support
 
   # Transform string, downcase all words, capitalize each not on list, capitalize first word. 
   def titleize(string)
-    words_not_to_capitalize = ["the","a","an","and","but","for","of","to","at","by","from"]
-    s = string.split.each{|word| word.capitalize! unless words_not_to_capitalize.include? (word.downcase) }
-    s[0].capitalize + " " + s[1..-1].join(" ")
+    do_not_capitalize = ["the","a","an","and","but","or","nor","for","of","to","at","by","from","in","on"] 
+    array = string.split.each do |word| 
+      if do_not_capitalize.include?(word.downcase)
+        word.downcase!
+      else
+        word.capitalize! 
+      end
+    end
+    array[0].capitalize + " " + array[1..-1].join(" ")
   end
 
   # Return count and word properly pluralized.
