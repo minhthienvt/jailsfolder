@@ -1,5 +1,5 @@
 class Controller
-  include Support
+  include(Support)
 
   # Set request object as an attribute accessible with @request variable.
   def initialize(request)

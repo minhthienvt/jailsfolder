@@ -1,5 +1,4 @@
 require "sqlite3"
-require 'byebug'
 
 # Simplistic ORM library using the Active Record pattern
 module HacktiveRecord
