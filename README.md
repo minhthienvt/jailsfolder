@@ -1,4 +1,4 @@
-# Jailsfolders
+# Jailsfolder - Jails MVC Web Framework and Blog App
 
 This is the source code for the Build Your Own Rails tutorial. 
 

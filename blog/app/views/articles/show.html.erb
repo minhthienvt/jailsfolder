@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <%= render_partial "layouts/_head.html.erb" %>
+  <%= render_partial("layouts/_head.html.erb") %>
   <body>
     <div id="container">
-      <%= render_partial "layouts/_navbar.html.erb" %>
+      <%= render_partial("layouts/_navbar.html.erb") %>
       <h1><%= titleize(@article.title) %></h1>
-      <p><%= DateTime.parse(@article.created_at).strftime("%b %d, %Y") if @article.created_at %></p>
+      <p><%= @article.created_at.strftime("%b %d, %Y") if @article.created_at %></p>
       <p>
         <a href="/articles">Back to the list</a> |
         <a href="/articles/<%= @article.id %>/edit">Edit</a> |

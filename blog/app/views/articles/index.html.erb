@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <%= render_partial "layouts/_head.html.erb" %>
+  <%= render_partial("layouts/_head.html.erb") %>
   <body>
     <div id="container">
-      <%= render_partial "layouts/_navbar.html.erb" %>
+      <%= render_partial("layouts/_navbar.html.erb") %>
       <h1>Articles</h1>
       <p>
         <%= pluralize(@articles.count, "Article", "Articles") %> | 
