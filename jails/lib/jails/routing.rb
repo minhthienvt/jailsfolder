@@ -37,7 +37,12 @@ class Routing
     else
       Rack::Response.new(["Nothing found"], 404, {"Content-Type" => "text/html"})
     end
-  rescue Exception => error
+  rescue StandardError => error
+    puts("-"*100)
+    puts("#{error.class.name.red.bold}: #{error.message}")
+    puts("Exception source stack displays filename, line number, and method the exception is in:".bold)
+    puts(error.backtrace)
+    puts("-"*100)
     Rack::Response.new(["Internal error"], 500, {"Content-Type" => "text/html"})
   end
 end

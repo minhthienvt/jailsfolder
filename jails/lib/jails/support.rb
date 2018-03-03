@@ -39,6 +39,11 @@ class String
     "\e[34m#{self}\e[0m" 
   end 
 
+  # colorize UNIX output red
+  def red
+    "\e[31m#{self}\e[0m" 
+  end
+
   # bold UNIX output
   def bold
     "\e[1m#{self}\e[22m" 
