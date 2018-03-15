@@ -39,6 +39,16 @@ class String
     "\e[34m#{self}\e[0m" 
   end 
 
+  # colorize UNIX output green
+  def green
+    "\e[32m#{self}\e[0m" 
+  end
+  
+  # colorize UNIX output brown
+  def brown
+    "\e[33m#{self}\e[0m" 
+  end
+  
   # colorize UNIX output red
   def red
     "\e[31m#{self}\e[0m" 

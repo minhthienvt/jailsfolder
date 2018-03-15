@@ -57,7 +57,7 @@ module HacktiveRecord
       values = columns.map { |key| self.send(key) } 
       columns = columns.join(",") 
       DB.execute("INSERT INTO #{self.class.table} (#{columns}) VALUES (#{placeholders})", values)
-      puts("\s #{self.class} SQL Statement: ".cyan.bold + "INSERT INTO #{self.class.table} (#{columns}) VALUES (#{placeholders})".blue.bold + values.to_s)
+      puts("\s #{self.class} SQL Statement: ".cyan.bold + "INSERT INTO #{self.class.table} (#{columns}) VALUES (#{placeholders})".green.bold + values.to_s)
       new_object.id = DB.execute("SELECT last_insert_rowid()")[0][0]
       return new_object
     end
@@ -69,13 +69,13 @@ module HacktiveRecord
       values = attributes.values
       values << id
       DB.execute("UPDATE #{self.class.table} SET #{columns} WHERE id = ?", values)
-      puts("\s #{self.class} SQL Statement: ".cyan.bold + "UPDATE #{self.class.table} SET #{columns} WHERE id = ?".blue.bold + values.to_s)
+      puts("\s #{self.class} SQL Statement: ".cyan.bold + "UPDATE #{self.class.table} SET #{columns} WHERE id = ?".brown.bold + values.to_s)
     end
 
     # Delete row from database.
     def destroy
       DB.execute("DELETE FROM #{self.class.table} WHERE id = ?", id)
-      puts("\s #{self.class} SQL Statement: ".cyan.bold + "DELETE FROM #{self.class.table} WHERE id = #{id}".blue.bold)
+      puts("\s #{self.class} SQL Statement: ".cyan.bold + "DELETE FROM #{self.class.table} WHERE id = #{id}".red.bold)
     end
   end
 end
