@@ -5,7 +5,8 @@
     <div id="container">
       <%= render_partial("layouts/_navbar.html.erb") %>
       <h1><%= titleize(@article.title) %></h1>
-      <p><%= @article.created_at.strftime("%b %d, %Y") if @article.created_at %></p>
+      <!-- Created_at date is saved in the database as a string. Convert it to a date object before formatting it. -->
+      <p><%= DateTime.parse(@article.created_at).strftime("%b %d, %Y") if @article.created_at %></p>
       <p>
         <a href="/articles">Back to the list</a> |
         <a href="/articles/<%= @article.id %>/edit">Edit</a> |

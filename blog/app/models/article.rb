@@ -15,11 +15,6 @@ class Article < HacktiveRecord::Base
   def timestamp
     Time.now.to_s
   end
-
-  # Return a date object by parsing the created_at date-time string. 
-  def created_at
-    DateTime.parse(@created_at)
-  end
   
   # Return title when accessing object as string, overrides default: class, encoded object id and instance variables.
   def to_s

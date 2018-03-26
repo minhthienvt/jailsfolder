@@ -4,6 +4,10 @@
 /blog/.ruby-gemset
 /blog/.ruby-version
 /blog/Gemfile.lock
+/blog/.byebug_history
+/blog/Rakefile
+/blog/test
+/rackapp
 /jails/.ruby-gemset
 /jails/.ruby-version
 /jails/*.gem
